@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin: 0; background-color: black;}
+.decor{ height: 87vh; max-width: 100vw; background-image: linear-gradient(to top left, #000000,#000000, #8a8704,#000000, #000000)}
+header{ background-color: #ffffff; box-shadow: 1px 1px 20px rgba(0, 0, 0); min-width: 100%;}
+.Navbar a{text-decoration: none; color: black; font-weight: 600;}
+.Navbar{width: 90%;
+margin: 0 auto; position: relative;
+padding-top: 1.5em; padding-bottom: 1.5em;}
+.Navbar .menu_list{display: none;}
+.Navbar .logo1{display: none;}
+.Navbar, .Navbar .signup{display: flex; justify-content: space-between;}
+.Navbar .signup{width: 200px;}
+.Navbar .signup .cart{position: relative;}
+.Navbar .signup .cart img{margin-top: 10px;}
+.Navbar .signup .cart span{position: absolute; font-size: 10px; font-weight:800; top: -5px; right: -10px; border-radius: 10px; color: #fff; background-image: linear-gradient(to right, #290c35, #8a8704);
+padding: 3px 8px;}
+.Navbar .signup .sign_in{background-image: linear-gradient(to right, #290c35, #8a8704);padding: 10px 15px; color: #fff; border-radius: 40px;}
+/*=================================
+Hamburger menu display by Soga
+===================================*/
+.Navbar .menu_list .dropdown_list{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+
+
+.Navbar .dropdown_list_item a{position: relative;}
+.Navbar .dropdown_list_item a::before{
+    content: url(./assets/plus-circle.svg); position: absolute; left: -50px; background-color: black; padding: 1px 2px;
+}
+.Navbar .dropdown_list_item p{
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.open_nav .menu_list{
+    display: block;
+    position: absolute; top: 100px;
+    width: 100%;
+    animation: fadeIn 3s;
+}
+.open_nav .dropdown_link{display: flex; cursor: pointer;}
+.dropdown_link{display: flex; cursor: pointer;}
+.open_nav .major_link{
+    margin-top: 30px;
+    display: block;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+.open_nav .dropdown{margin-top: 30px; border-bottom:  1px solid rgba(0, 0, 0, 0.1);}
+
+header.open_nav{
+    animation: expand .5s;
+    height: 100vh;
+}
+@keyframes expand{
+    from{height: 80px;}
+    to{height: 100vh;}
+}
+
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@media (min-width:1024px){
+    .Navbar{max-width: 1024px;}
+    .Navbar .hamburger_menu{display: none;}
+    .Navbar .signup{width: 150px;}
+    .Navbar .logo1{display: block;}
+    .Navbar .logo2{display: none;}
+    .Navbar .menu_list{display: flex;
+    margin-top: 10px; justify-content: space-between; width: 40%;}
+    .Navbar .dropdown_list{display:none}
+    .Navbar .dropdown_link{display: flex;}
+}
